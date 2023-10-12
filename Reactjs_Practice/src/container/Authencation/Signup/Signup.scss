@@ -1,0 +1,104 @@
+.signup-container {
+    width: 400px;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    .title-signup {
+        text-align: center;
+        color: white;
+    }
+
+    .text-content {
+        text-align: center;
+        font-size: 17px;
+        text-transform: capitalize;
+        padding: 10px 5px;
+    }
+
+    .signup-input-content {
+        position: relative;
+        width: 75%;
+        display: grid;
+        align-items: center;
+        margin-left: 8%;
+        margin-bottom: 7%;
+        margin-top: 3%;
+
+        input {
+            width: 100%;
+            padding: 10px 5px 7px 5px;
+            font-size: 20px;
+            color: white;
+            border: none;
+            outline: none;
+            transition: 0.5s;
+            background: transparent;
+            border-bottom: 1px solid white;
+
+
+            &:valid~span,
+            &:focus~span {
+                color: #2575fc;
+                transform: translateX(0px) translateY(-10px);
+                font-size: 15px;
+                padding: 0 5px;
+            }
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px 5px;
+            pointer-events: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+            transition: 0.5s;
+        }
+    }
+
+    .btn-submit {
+        background-color: #2575fc;
+        color: white;
+        width: 150px;
+        height: 45px;
+        font-size: 20px;
+        border-radius: 7px;
+        border: none;
+        position: relative;
+        left: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        margin-top: 25px;
+
+        .link-submit {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    .signup-group {
+        color: white;
+        margin: 5px 10px;
+        padding: 5px 10px;
+
+        .signup-group-title {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .signup-group-icon {
+            font-size: 1em;
+            text-align: center;
+
+            .icon-google {
+                margin-right: 50px;
+            }
+        }
+    }
+}
