@@ -1,9 +1,28 @@
-import "./Signup.scss"
+import React ,{ useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGooglePlus } from "@fortawesome/free-brands-svg-icons"
-import { Link } from "react-router-dom";
+import "./Signup.scss"
 
 function Signup() {
+const [newCustomer, setNewCustomer]=useState({username:"", password:"", phonenumber:""})
+const navigate = useNavigate()
+
+const handleChangeInput=(event, id)=>{
+    setNewCustomer({
+        ...newCustomer,
+        [id]:event.target.value
+    })
+}
+
+const handleSignUp=()=>{
+    if(newCustomer !== null){
+navigate("/")
+    }else{
+        alert("Error")
+    }
+}
+
     return (
         <div className="signup-container">
             <div className="title-signup">Create Account</div>
@@ -15,20 +34,19 @@ function Signup() {
             </div>
             <div className="text-content">or use your email for registration</div>
             <div className="signup-input-content">
-                <input type="text" required />
+                <input type="text" value={newCustomer.username} onChange={(event)=>handleChangeInput(event, "username")} required />
                 <span>Username</span>
             </div>
             <div className="signup-input-content">
-                <input type="password" required />
+                <input type="password" value={newCustomer.password} onChange={(event)=>handleChangeInput(event, "password")} required />
                 <span>Password</span>
             </div>
             <div className="signup-input-content">
-                <input type="text" required />
+                <input type="text" value={newCustomer.phonenumber} onChange={(event)=>{handleChangeInput(event, "phonenumber")}} required />
                 <span>Phone number</span>
             </div>
             <div>
-                <button className="btn-submit" >
-                    <Link to={{ pathname: `/` }} className="link-submit">Sign Up</Link></button>
+                <button className="btn-submit" onClick={handleSignUp}>Sign Up</button>
             </div>
         </div>
     );

@@ -1,11 +1,7 @@
 .navbar-container {
-  border: solid red 2px;
-  background-color: #333;
   display: flex;
   justify-content: space-between;
-  color: white;
   gap: 2rem;
-  padding: 0 2rem;
   align-items: stretch;
 
   .navbar-title {
@@ -20,7 +16,6 @@
     list-style: none;
     display: flex;
     gap: 2rem;
-    align-items: center;
     li {
       &:hover {
         background-color: green;
@@ -34,9 +29,9 @@
       color: inherit;
       height: 100%;
       display: flex;
-      align-items: center;
+      align-content: center;
+      text-align: center;
       padding: 0.25rem;
-      font-size: 2rem;
     }
   }
 }
