@@ -1,110 +1,109 @@
 .signin-container {
-    width: 400px;
-    height: 450px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 400px;
+  height: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+
+  .title-signin {
+    text-align: center;
+  }
+
+  .text-content {
+    text-align: center;
+    font-size: 17px;
+    text-transform: capitalize;
+    padding: 10px 5px;
+  }
+
+  .signin-input-content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    width: 75%;
+    margin-left: 8%;
+    margin-bottom: 7%;
+    margin-top: 3%;
+
+    input {
+      width: 100%;
+      padding: 10px 5px 7px 5px;
+      font-size: 20px;
+      color: white;
+      border: none;
+      outline: none;
+      transition: 0.5s;
+      background: transparent;
+      border-bottom: 1px solid white;
+
+      &:valid ~ span,
+      &:focus ~ span {
+        color: #2575fc;
+        transform: translateX(0px) translateY(-10px);
+        font-size: 15px;
+        padding: 0 5px;
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 10px 5px;
+      pointer-events: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: white;
+      transition: 0.5s;
+    }
+  }
+
+  button {
+    background-color: #2575fc;
+    width: 150px;
+    height: 45px;
     color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    margin-top: 35px;
 
-    .title-signin {
-        text-align: center;
+    .link-submit {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
     }
 
-    .text-content {
-        text-align: center;
-        font-size: 17px;
-        text-transform: capitalize;
-        padding: 10px 5px;
+    &:hover {
+      background: lightskyblue;
+      transition: all 1s;
+    }
+  }
+
+  .signin-group {
+    color: white;
+    margin: 5px 10px;
+    padding: 5px 10px;
+
+    .signin-group-title {
+      font-size: 22px;
+      text-align: center;
     }
 
-    .signin-input-content {
-        position: relative;
-        width: 75%;
-        display: grid;
-        align-items: center;
-        margin-left: 8%;
-        margin-bottom: 7%;
-        margin-top: 3%;
+    .signin-group-icon {
+      font-size: 1em;
+      text-align: center;
 
-        input {
-            width: 100%;
-            padding: 10px 5px 7px 5px;
-            font-size: 20px;
-            color: white;
-            border: none;
-            outline: none;
-            transition: 0.5s;
-            background: transparent;
-            border-bottom: 1px solid white;
-
-
-            &:valid~span,
-            &:focus~span {
-                color: #2575fc;
-                transform: translateX(0px) translateY(-10px);
-                font-size: 15px;
-                padding: 0 5px;
-            }
-        }
-
-        span {
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding: 10px 5px;
-            pointer-events: none;
-            font-size: 20px;
-            text-transform: uppercase;
-            color: white;
-            transition: 0.5s;
-        }
+      .icon-google {
+        margin-right: 50px;
+        // color: red;
+      }
     }
-
-    button {
-        background-color: #2575fc;
-        width: 150px;
-        height: 45px;
-        color: white;
-        font-size: 20px;
-        border-radius: 7px;
-        border: none;
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        margin-top: 35px;
-
-        .link-submit {
-            text-decoration: none;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        &:hover {
-            background: lightskyblue;
-            transition: all 1s;
-        }
-    }
-
-    .signin-group {
-        color: white;
-        margin: 5px 10px;
-        padding: 5px 10px;
-
-        .signin-group-title {
-            font-size: 22px;
-            text-align: center;
-        }
-
-        .signin-group-icon {
-            font-size: 1em;
-            text-align: center;
-
-            .icon-google {
-                margin-right: 50px;
-                // color: red;
-            }
-        }
-    }
+  }
 }

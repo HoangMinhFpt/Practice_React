@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .dropdown-customer-container {
-  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .btn-customer {
-    width: 25px;
-    height: 25px;
+    position: fixed;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    padding: auto;
     cursor: pointer;
+    font-size: 20px;
   }
 }

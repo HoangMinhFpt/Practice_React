@@ -1,10 +1,10 @@
 import React from "react";
 import {  Link, useMatch, useResolvedPath } from "react-router-dom";
 import Navbar from "../Nav/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss"
 import DropDownCustomer from "../../components/dropdown/customer/DropDownCustomer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 function Header({to}) {
     const resolvedPath = useResolvedPath(to);
@@ -18,13 +18,17 @@ function Header({to}) {
                 <Navbar/>
             </div>
             <div className="header-right-content">
-            <form className="search-content">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <DropDownCustomer/>
+                <div className="header-one-content">
+                    <div className="search-content">
+                        <div className="icon-search"><FontAwesomeIcon icon={faMagnifyingGlass}/></div>
+                        <input type="text" className="search-form"/>
+                    </div>
+                </div>
+                <div className="header-two-content">
+                    <DropDownCustomer/>
+                </div>
             </div>
-            </div>
+        </div>
   );
 }
 

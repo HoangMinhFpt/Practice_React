@@ -1,5 +1,4 @@
 .login-background-container {
-
   background: linear-gradient(45deg, #6a11cb, #2575fc);
   height: 100vh;
 
@@ -27,6 +26,12 @@
         left: 0;
         text-align: center;
         border-radius: 10px;
+        .text-left {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
 
         &.show {
           animation: myshow 5s;
@@ -42,7 +47,6 @@
           font-size: 20px;
           cursor: pointer;
           text-transform: uppercase;
-
         }
       }
     }
@@ -62,6 +66,13 @@
         justify-self: end;
         right: 0;
 
+        .text-right {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
         &.show {
           animation: myshow 3s;
         }
@@ -76,7 +87,6 @@
           font-size: 20px;
           cursor: pointer;
           text-transform: uppercase;
-
         }
       }
     }
