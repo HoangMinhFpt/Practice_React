@@ -1,13 +1,10 @@
 .signup-container {
-    width: 400px;
-    height: 450px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    width: 500px;
     box-sizing: border-box;
 
     .title-signup {
         text-align: center;
-        color: white;
+        text-transform: uppercase;
     }
 
     .text-content {
@@ -19,31 +16,31 @@
 
     .signup-input-content {
         position: relative;
-        width: 75%;
         display: grid;
         align-items: center;
-        margin-left: 8%;
-        margin-bottom: 7%;
-        margin-top: 3%;
+        width: 75%;
+        margin: 20px auto;
 
         input {
             width: 100%;
-            padding: 10px 5px 7px 5px;
+            padding: 10px 5px 7px 15px;
             font-size: 20px;
-            color: white;
-            border: none;
+            border-radius: 10px;
             outline: none;
-            transition: 0.5s;
-            background: transparent;
-            border-bottom: 1px solid white;
-
 
             &:valid~span,
             &:focus~span {
-                color: #2575fc;
-                transform: translateX(0px) translateY(-10px);
+                color: white;
+                background-color: #059eae;
+                transform: translateX(10px) translateY(-10px);
                 font-size: 15px;
-                padding: 0 5px;
+                padding: 0 15px;
+                border-radius: 5px;
+            }
+
+            &:focus {
+                border: #059eae solid 2px;
+
             }
         }
 
@@ -51,39 +48,52 @@
             position: absolute;
             left: 0;
             top: 0;
-            padding: 10px 5px;
+            padding: 10px 15px;
             pointer-events: none;
             font-size: 20px;
             text-transform: uppercase;
-            color: white;
             transition: 0.5s;
         }
     }
 
-    .btn-submit {
-        background-color: #2575fc;
-        color: white;
-        width: 150px;
-        height: 45px;
+    .text-signin-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 20px;
+
+        .link-signin {
+            text-decoration: none;
+            color: #059eae;
+        }
+    }
+
+    button {
+        background-color: #059eae;
+        width: 75%;
+        height: 45px;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
         border-radius: 7px;
         border: none;
         position: relative;
-        left: 20%;
+        left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
-        margin-top: 25px;
+        margin-top: 35px;
+        text-transform: uppercase;
 
-        .link-submit {
-            text-decoration: none;
-            color: white;
-            text-transform: uppercase;
+        &:hover {
+            box-shadow: rgba(255, 255, 255, 0.9) 0rem 0rem 0.0625rem 0.0625rem inset,
+                rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem;
+            transition: all 0.5s;
         }
     }
 
     .signup-group {
-        color: white;
+        color: #059eae;
         margin: 5px 10px;
         padding: 5px 10px;
 

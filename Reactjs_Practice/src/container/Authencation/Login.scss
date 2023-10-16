@@ -1,104 +1,24 @@
-.login-background-container {
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  height: 100vh;
+.login-container {
+  display: flex;
 
-  .login-container {
-    display: flex;
-    width: 800px;
-    height: 450px;
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .login-background-content {
+    background: url(https://demos.creative-tim.com/material-kit-pro-react/static/media/illustration-reset.c5f36c0c.jpg) transparent;
+    width: calc(100% - 2rem);
+    height: calc(100vh - 2rem);
+    max-width: 50%;
+    margin: 15px;
     border-radius: 10px;
-    box-sizing: border-box;
-    color: white;
-
-    .login-left-content {
-      display: flex;
-
-      .left-content {
-        width: 400px;
-        height: 450px;
-        background-color: #6a11cb;
-        position: fixed;
-        left: 0;
-        text-align: center;
-        border-radius: 10px;
-        .text-left {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-        &.show {
-          animation: myshow 5s;
-        }
-
-        button {
-          width: 150px;
-          height: 45px;
-          background-color: #2575fc;
-          border: none;
-          border-radius: 10px;
-          color: white;
-          font-size: 20px;
-          cursor: pointer;
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .login-right-content {
-      display: flex;
-      color: white;
-      text-align: center;
-
-      .right-content {
-        border-radius: 10px;
-        text-align: center;
-        width: 400px;
-        height: 450px;
-        background-color: #2575fc;
-        position: fixed;
-        justify-self: end;
-        right: 0;
-
-        .text-right {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-        &.show {
-          animation: myshow 3s;
-        }
-
-        button {
-          width: 150px;
-          height: 45px;
-          background-color: #6a11cb;
-          border: none;
-          border-radius: 10px;
-          color: white;
-          font-size: 20px;
-          cursor: pointer;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-}
-
-@keyframes myshow {
-  from {
-    opacity: 0;
   }
 
-  to {
-    opacity: 1;
+  .login-form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    height: calc(100vh - 2rem);
+    max-width: 50%;
+    margin-left: 16px;
+    margin-top: 16px;
   }
+
 }

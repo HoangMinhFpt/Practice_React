@@ -1,9 +1,12 @@
 .app-container {
   .navbar-content {
     height: 100%;
-    width: 90vw;
-    margin-left: 5vw;
     font-size: 2rem;
     font-weight: 500;
+  }
+
+  .App {
+    width: 90vw;
+    margin-left: 5vw;
   }
 }

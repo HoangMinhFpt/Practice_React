@@ -1,42 +1,22 @@
-import { useState } from "react";
+import { useMatch, useResolvedPath } from "react-router-dom";
 import "./Login.scss"
 import Signin from "./Signin/Signin";
 import Signup from "./Signup/Signup";
 
 
-function Login() {
-  const [showLeftContent, setShowLeftContent] = useState(true)
-  const [showRightContent, setShowRightContent] = useState(false)
+function Login({ to }) {
 
-  const handleChange = () => {
-    setShowLeftContent(!showLeftContent)
-    setShowRightContent(!showRightContent)
-  }
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
   return (
-    <div className="login-background-container">
-      <div className="login-container">
-        <div className="login-left-content">
-          <Signin className="signin-content" />
-          <div className={showLeftContent ? "left-content" : "left-content show"} style={{ display: showLeftContent ? "none" : "" }}>
-            <div className="text-left">
-
-            <h3>Welcome back</h3>
-            <div >To keep connected with us please login with your personal info</div>
-            <button onClick={handleChange}>Login</button>
-            </div>
-          </div>
-        </div>
-        <div className="login-right-content">
-          <Signup className="signup-content" />
-          <div className={showRightContent ? "right-content " : "right-content show"} style={{ display: showRightContent ? "none" : "" }}>
-            <div className="text-right">
-
-            <h3>Hello, Friend</h3>
-            <div >Enter your personal details and start journey with us</div>
-            <button onClick={handleChange}>Register</button>
-            </div>
-          </div>
+    <div className="login-container">
+      <div className="login-background-content">
+      </div>
+      <div className="login-form-content">
+        {/* <Signin /> */}
+        <div>
+          {isActive.pathname === "/login" ? <Signin /> : <Signup />}
         </div>
       </div>
     </div>
