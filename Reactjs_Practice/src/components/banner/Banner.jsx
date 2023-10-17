@@ -1,34 +1,29 @@
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Banner.scss"
 
-const Item = ({ item, index }) => (
-    <div className={`carousel-item ${index === 0 ? "active" : ""}`}>
-        <Link to={item.to}>
-            <center>
-                <img src={item.img} className="img-fluid" alt={item.title} />
-            </center>
-            {(item.title || item.description) && (
-                <div className="carousel-caption d-none d-md-block">
-                    {item.title && <h5>{item.title}</h5>}
-                    {item.description && <p>{item.description}</p>}
-                </div>
-            )}
-        </Link>
-    </div>
-);
+function Banner(props) {
 
-const Indicator = ({ item, index }) => (
-    <li
-        data-bs-target={`#${item}`}
-        data-bs-slide-to={index}
-        className={`${index === 0 ? "active" : ""}`}
-    />
-);
+    const Item = ({ item, index }) => (
+        <div className={`carousel-item ${index === 0 ? "active" : ""}`} >
+            <div to={item.to}>
+                <center>
+                    <img src={item.img} className="img-fluid" alt={item.title} />
+                </center>
+            </div>
+        </div>
+    );
 
-const Banner = (props) => {
+    const Indicator = ({ item, index }) => (
+        <li
+            data-bs-target={`#${item}`}
+            data-bs-slide-to={index}
+            className={`${index === 0 ? "active" : ""}`}
+        />
+    );
+
     return (
         <div
             id={props.id}
@@ -52,7 +47,7 @@ const Banner = (props) => {
                 role="button"
                 data-bs-slide="prev"
             >
-                <FontAwesomeIcon icon={faChevronLeft} style={{ color: "red" }} />
+                <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#059eae" }} />
             </a>
             <a
                 className="carousel-control-next"
@@ -60,7 +55,7 @@ const Banner = (props) => {
                 role="button"
                 data-bs-slide="next"
             >
-                <FontAwesomeIcon icon={faChevronRight} style={{ color: "red" }} />
+                <FontAwesomeIcon icon={faChevronRight} style={{ color: "#059eae" }} />
             </a>
         </div>
     );

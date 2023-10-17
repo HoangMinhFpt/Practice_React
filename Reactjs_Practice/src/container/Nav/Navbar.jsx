@@ -6,6 +6,8 @@ function Navbar() {
         <nav className="navbar-container"  >
             <ul>
                 <CustomLink to="/product">Product</CustomLink>
+                <CustomLink to="/product">Product</CustomLink>
+                <CustomLink to="/product">Product</CustomLink>
             </ul>
         </nav>
     );
