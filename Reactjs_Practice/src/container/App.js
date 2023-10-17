@@ -6,6 +6,9 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import Notification from "../view/Notification";
+import Profile from "../view/Profile";
+import Wishlist from "../view/Wishlist";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Login />} />
+          <Route path="/notification" element={<Notification />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
     </div>

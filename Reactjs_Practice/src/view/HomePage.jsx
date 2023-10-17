@@ -1,8 +1,10 @@
+import Banner from "../components/banner/Banner";
+import { data } from "../components/data";
 
 function HomePage() {
   return (
     <div className="App">
-        Homepage
+      <Banner className="mb-3" id="carouselBannerHome" data={data.banner} aria-hidden="true" />
     </div>
   );
 }

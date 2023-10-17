@@ -1,0 +1,26 @@
+.carousel {
+
+    .carousel-inner {
+        .carousel-item {
+            width: 90vw;
+            border-radius: 10px;
+
+            .img-fluid {
+                width: 90vw;
+                height: 500px;
+                object-fit: contain;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        li {
+
+            &::marker {
+                display: none;
+                color: transparent;
+            }
+        }
+    }
+}

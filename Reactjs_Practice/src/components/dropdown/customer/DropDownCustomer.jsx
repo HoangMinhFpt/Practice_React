@@ -9,17 +9,17 @@ function DropDownCustomer() {
   return (
     <div className="dropdown-customer-container">
       <button className="btn-customer" type="button" aria-expanded="false" data-toggle="dropdown" data-bs-toggle="dropdown">
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} style={{ color: "#059eae" }} />
       </button>
       <ul className="dropdown-menu">
         <li>
-          <Link className="dropdown-item" to="/">
+          <Link className="dropdown-item" to="/profile">
             <FontAwesomeIcon icon={faIdBadge} className="text-info" />&nbsp;
             My Profile
           </Link>
         </li>
         <li>
-          <Link className="dropdown-item" to="/">
+          <Link className="dropdown-item" to="/wishlist">
             <FontAwesomeIcon icon={faListCheck} className="text-success" />&nbsp;
             Wishlist
           </Link>
@@ -28,7 +28,7 @@ function DropDownCustomer() {
           <hr className="dropdown-divider" />
         </li>
         <li>
-          <Link className="dropdown-item" to="/">
+          <Link className="dropdown-item" to="/notification">
             <FontAwesomeIcon icon={faBell} className="text-warning" />&nbsp;
             Notification
           </Link>
@@ -37,7 +37,7 @@ function DropDownCustomer() {
           <hr className="dropdown-divider" />
         </li>
         <li>
-          <Link className="dropdown-item" to="/">
+          <Link className="dropdown-item" to="/login">
             <FontAwesomeIcon icon={faArrowRightFromBracket} className="text-danger" />&nbsp;
             Logout
           </Link>
