@@ -1,14 +1,13 @@
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./Banner.scss"
 
 function Banner(props) {
 
     const Item = ({ item, index }) => (
         <div className={`carousel-item ${index === 0 ? "active" : ""}`} >
-            <div to={item.to}>
+            <div>
                 <center>
                     <img src={item.img} className="img-fluid" alt={item.title} />
                 </center>
@@ -47,7 +46,7 @@ function Banner(props) {
                 role="button"
                 data-bs-slide="prev"
             >
-                <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#059eae" }} />
+                <FontAwesomeIcon icon={faChevronLeft} style={{ color: "##22232b" }} />
             </a>
             <a
                 className="carousel-control-next"
@@ -55,7 +54,7 @@ function Banner(props) {
                 role="button"
                 data-bs-slide="next"
             >
-                <FontAwesomeIcon icon={faChevronRight} style={{ color: "#059eae" }} />
+                <FontAwesomeIcon icon={faChevronRight} style={{ color: "##22232b" }} />
             </a>
         </div>
     );

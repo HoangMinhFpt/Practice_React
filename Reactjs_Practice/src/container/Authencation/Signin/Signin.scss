@@ -28,10 +28,10 @@
       border-radius: 10px;
       outline: none;
 
-      &:valid~span,
-      &:focus~span {
+      &:valid ~ span,
+      &:focus ~ span {
         color: white;
-        background-color: #059eae;
+        background-color: #22232b;
         transform: translateX(10px) translateY(-10px);
         font-size: 15px;
         padding: 0 15px;
@@ -39,8 +39,7 @@
       }
 
       &:focus {
-        border: #059eae solid 2px;
-
+        border: #22232b solid 2px;
       }
     }
 
@@ -65,7 +64,7 @@
     .link-signup {
       text-transform: capitalize;
       text-decoration: none;
-      color: #059eae;
+      color: #22232b;
     }
   }
 
@@ -89,8 +88,8 @@
         width: 0;
         height: 0;
 
-        &:checked+.slider {
-          background-color: #059eae;
+        &:checked + .slider {
+          background-color: #22232b;
 
           &::before {
             -webkit-transform: translateX(26px);
@@ -99,11 +98,10 @@
           }
         }
 
-        &:focus+.slider {
-          box-shadow: 0 0 1px #059eae;
+        &:focus + .slider {
+          box-shadow: 0 0 1px #22232b;
         }
       }
-
     }
 
     .slider {
@@ -114,8 +112,8 @@
       right: 0;
       bottom: 0;
       background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
 
       &:before {
         position: absolute;
@@ -126,8 +124,8 @@
         bottom: -3px;
         border: solid 2px gray;
         background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
       }
 
       &.round {
@@ -141,7 +139,7 @@
   }
 
   button {
-    background-color: #059eae;
+    background-color: #22232b;
     width: 75%;
     height: 45px;
     color: white;
@@ -165,7 +163,7 @@
   }
 
   .signin-group {
-    color: #059eae;
+    color: #22232b;
     margin: 5px 10px;
     padding: 5px 10px;
 

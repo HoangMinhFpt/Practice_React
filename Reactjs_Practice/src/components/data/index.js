@@ -2,21 +2,39 @@ export const data = {
   banner: [
     {
       to: "/link",
-      img: "https://mona.media/wp-content/uploads/2022/12/tai-sao-tkw-thu-vien.png",
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/slider3-aero3-1920x943_1920x846.progressive.jpg?v=1613507176",
       title: "First slide label",
       description: "Nulla vitae elit libero, a pharetra augue mollis interdum",
     },
     {
       to: "/link",
-      img: "../../images/banner/Banner_3.webp",
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/slider1-aero3-1920x943_1920x846.progressive.jpg?v=1613507176",
       title: "Second slide label",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       to: "/link",
-      img: "../../images/banner/Banner_1.webp",
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/slider1-aero2-1920x933_1920x846.progressive.jpg?v=1613507125",
       title: "Third slide label",
       description: " Praesent commodo cursus magna, vel scelerisque nisl.",
+    },
+  ],
+
+  collection: [
+    {
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/img1-top-aero1.jpg?v=1613507033",
+      title: "collection one",
+      description: "new trending"
+    },
+    {
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/img2-top-aero1.jpg?v=1613507033",
+      title: "collection two",
+      description: "high performance"
+    },
+    {
+      img: "https://aero-theme.myshopify.com/cdn/shop/files/img3-top-aero1.jpg?v=1613507033",
+      title: "collection three",
+      description: "new product"
     },
   ],
   iconProducts: [

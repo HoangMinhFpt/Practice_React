@@ -1,49 +1,27 @@
 .collection-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: uppercase;
-    color: white;
-    font-size: 20px;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10vh;
 
-    .collection-one-content {
-        position: relative;
+  .collection-content {
+    position: relative;
 
-        .collection-one-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-    }
-
-    .collection-two-content {
-        position: relative;
-
-        .collection-two-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .collection-three-content {
-        position: relative;
-
-        .collection-three-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .collection-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .collection-text {
-        display: inline-block;
-        width: 250px;
-        color: #ffde00;
+      display: inline-block;
+      width: 250px;
+      color: #ffde00;
     }
+  }
 }

@@ -9,7 +9,7 @@ function DropDownCustomer() {
   return (
     <div className="dropdown-customer-container">
       <button className="btn-customer" type="button" aria-expanded="false" data-toggle="dropdown" data-bs-toggle="dropdown">
-        <FontAwesomeIcon icon={faUser} style={{ color: "#059eae" }} />
+        <FontAwesomeIcon icon={faUser} style={{ color: "##22232b" }} />
       </button>
       <ul className="dropdown-menu">
         <li>
