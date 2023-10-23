@@ -7,5 +7,9 @@
 
   .App {
     margin: 0 auto;
+
+    .container-fluid {
+      width: 75vw;
+    }
   }
 }

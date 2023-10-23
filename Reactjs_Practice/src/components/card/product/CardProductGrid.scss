@@ -1,0 +1,20 @@
+.card-grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-grid-content {
+        width: 20rem;
+        border-radius: 20px;
+        margin: 5px 20px;
+
+        .card-footer {
+            display: flex;
+
+            button {
+                width: 45vh;
+                margin: 0 10px;
+            }
+        }
+    }
+}

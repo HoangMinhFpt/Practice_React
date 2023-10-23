@@ -1,6 +1,6 @@
 .collection-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   color: white;
@@ -10,6 +10,7 @@
 
   .collection-content {
     position: relative;
+    margin: 0 50px;
 
     .collection-title {
       position: absolute;

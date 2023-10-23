@@ -10,9 +10,20 @@ function HomePage() {
     <div className="App">
       <Banner className="mb-3" id="carouselBannerHome" data={data.banner} aria-hidden="true" />
       <Collection id="collectionHome" data={data.collection} aria-hidden="true" />
-      <ModulTitle id="abc"/>
-      <CardProductGrid data = {data.products} className="col-md-4"/>
-      <Footer/>
+      <ModulTitle />
+      <div className="container-fluid">
+        <div className="row">
+          {data.products.map((product, idx) => {
+            return (
+              <div className="col-sm-4" key={idx}>
+
+                <CardProductGrid data={product} />
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

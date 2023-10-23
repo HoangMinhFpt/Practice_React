@@ -24,17 +24,17 @@ export const data = {
     {
       img: "https://aero-theme.myshopify.com/cdn/shop/files/img1-top-aero1.jpg?v=1613507033",
       title: "collection one",
-      description: "new trending"
+      description: "new trending",
     },
     {
       img: "https://aero-theme.myshopify.com/cdn/shop/files/img2-top-aero1.jpg?v=1613507033",
       title: "collection two",
-      description: "high performance"
+      description: "high performance",
     },
     {
       img: "https://aero-theme.myshopify.com/cdn/shop/files/img3-top-aero1.jpg?v=1613507033",
       title: "collection three",
-      description: "new product"
+      description: "new product",
     },
   ],
   iconProducts: [
@@ -162,6 +162,40 @@ export const data = {
       name: "Great product name goes here",
       img: "../../images/products/tshirt_green_480x400.webp",
       price: 10,
+      originPrice: 0,
+      discountPrice: 0,
+      discountPercentage: 0,
+      isNew: false,
+      isHot: false,
+      star: 0,
+      isFreeShipping: false,
+      description:
+        "Morbi lobortis velit non consectetur porta.|Duis auctor risus ac purus vehicula tempor.|Fusce at ipsum a leo tempor malesuada.|Curabitur tincidunt justo vel volutpat suscipit.",
+    },
+    {
+      id: 5,
+      sku: "FAS-04",
+      link: "/product/detail",
+      name: "Great product name goes here",
+      img: "../../images/products/tshirt_green_480x400.webp",
+      price: 105,
+      originPrice: 0,
+      discountPrice: 0,
+      discountPercentage: 0,
+      isNew: false,
+      isHot: false,
+      star: 0,
+      isFreeShipping: false,
+      description:
+        "Morbi lobortis velit non consectetur porta.|Duis auctor risus ac purus vehicula tempor.|Fusce at ipsum a leo tempor malesuada.|Curabitur tincidunt justo vel volutpat suscipit.",
+    },
+    {
+      id: 6,
+      sku: "FAS-04",
+      link: "/product/detail",
+      name: "Great product name goes here",
+      img: "../../images/products/tshirt_green_480x400.webp",
+      price: 108,
       originPrice: 0,
       discountPrice: 0,
       discountPercentage: 0,
