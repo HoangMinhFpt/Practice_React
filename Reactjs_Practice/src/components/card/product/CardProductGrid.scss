@@ -1,20 +1,41 @@
 .card-grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 
-    .card-grid-content {
-        width: 20rem;
-        border-radius: 20px;
-        margin: 5px 20px;
-
-        .card-footer {
-            display: flex;
-
-            button {
-                width: 45vh;
-                margin: 0 10px;
-            }
-        }
+  .card-grid-content {
+    width: 20rem;
+    border-radius: 20px;
+    margin: 5px 20px;
+    .card-img-top {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
     }
+
+    .card-body {
+      .card-text-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card-price {
+          color: red;
+        }
+        .card-review {
+          color: yellow;
+        }
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      button {
+        width: 45vh;
+        margin: 0 10px;
+      }
+    }
+  }
 }
