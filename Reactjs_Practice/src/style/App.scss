@@ -12,8 +12,15 @@
       width: 75vw;
     }
     .container-best {
-      background-color: #22232b;
+      background: url(https://aero-theme.myshopify.com/cdn/shop/files/bkg_module_list.jpg?v=1613507284)
+        center;
       color: white;
+      .product-best {
+        .carousel-inner {
+          margin-left: 10vw;
+          width: 80vw;
+        }
+      }
     }
   }
 }

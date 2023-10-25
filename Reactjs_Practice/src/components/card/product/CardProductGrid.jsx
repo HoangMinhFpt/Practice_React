@@ -1,34 +1,27 @@
 import { faCartPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as IconStarFill } from "bootstrap-icons/icons/star-fill.svg";
-import "./CardProductGrid.scss"
+import "./CardProductGrid.scss";
 
 function CardProductGrid(props) {
+  const formatter = new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  });
   const product = props.data;
+  const discountPrice =
+    (product.originPrice * product.discountPercentage) / 100;
+  const price = product.originPrice - discountPrice;
   return (
     <div className="card-grid-container">
-      <div className="card card-grid-content">
+      <div className="card ">
         <img src={product.img} className="card-img-top" alt="..." />
+        <div className="label-product label_sale">
+          <span>-{product.discountPercentage + "%"}</span>
+        </div>
         <div className="card-body">
-          <h5 className="card-title">{product.name}</h5>
-          <div className="card-text-content">
-            <span >${product.price}</span>
-            {product.originPrice > 0 && (
-              <del className="small text-muted">
-                ${product.originPrice}
-              </del>
-            )}
-            {(product.discountPercentage > 0 || product.discountPrice > 0) && (
-              <span className={`rounded p-1 bg-warning small`}>
-                -
-                {product.discountPercentage > 0
-                  ? product.discountPercentage + "%"
-                  : "$" + product.discountPrice}
-              </span>
-            )}
-          </div>
-          <hr />
-          <div>
+          <div className="review-star">
+            <div className="star">
               {product.star > 0 &&
                 Array.from({ length: 5 }, (_, key) => {
                   if (key <= product.star)
@@ -41,6 +34,18 @@ function CardProductGrid(props) {
                     );
                 })}
             </div>
+            <div className="review-title">{product.review} review</div>
+          </div>
+          <hr />
+          <h5 className="card-title">{product.name}</h5>
+          <div className="card-text-content">
+            <span>{formatter.format(price)} </span>
+            {product.originPrice > 0 && (
+              <del className="small text-muted">
+                {formatter.format(product.originPrice)}
+              </del>
+            )}
+          </div>
         </div>
         <div className="card-footer">
           <button
