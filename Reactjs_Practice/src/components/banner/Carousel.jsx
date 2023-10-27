@@ -1,29 +1,44 @@
 import React from "react";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.min.css";
+import "owl.carousel/dist/assets/owl.theme.default.min.css";
+import CardProductList from "../card/product/CardProductList";
+import "./Carousel.scss";
 
 const Carousel = (props) => {
-    return (
-        <div id={props.id} className={`carousel slide ${props.className}`} data-bs-ride="carousel">
-            <div className="carousel-inner">{props.children}</div>
-            <a
-                className="carousel-control-prev"
-                href={"#" + props.id}
-                role="button"
-                data-bs-slide="prev"
-            >
-                <span className="carousel-control-prev-icon" aria-hidden="true" />
-                <span className="sr-only">Previous</span>
-            </a>
-            <a
-                className="carousel-control-next"
-                href={"#" + props.id}
-                role="button"
-                data-bs-slide="next"
-            >
-                <span className="carousel-control-next-icon" aria-hidden="true" />
-                <span className="sr-only">Next</span>
-            </a>
-        </div>
-    );
+  const option = {
+    animateOut: "slideOutTop",
+    nav: true,
+    dots: true,
+    dotsEach: true,
+    responsive: {
+      1000: {
+        items: 2,
+      },
+      725: { items: 1 },
+      550: { items: 1 },
+      350: {
+        items: 1,
+        innerWidth: "100%",
+        outerWidth: "100%",
+      },
+    },
+  };
+  return (
+    <div className="owl-carousel-container">
+      <OwlCarousel {...option} className="owl-carousel-content">
+        {props.data.map((product, index) => {
+          return (
+            <CardProductList
+              data={product}
+              className="card-list-carousel"
+              key={index}
+            />
+          );
+        })}
+      </OwlCarousel>
+    </div>
+  );
 };
 
 export default Carousel;

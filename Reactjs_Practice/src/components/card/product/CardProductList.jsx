@@ -14,14 +14,14 @@ function CardProductList(props) {
   const price = product.originPrice - discountPrice;
   return (
     <div className="card-container">
-      <div class="card">
-        <div class="row g-2">
-          <div class="col-md-5">
-            <img src={product.img} class="img-fluid" alt="..." />
+      <div className="card">
+        <div className="row g-0">
+          <div className="col-md-5">
+            <img src={product.img} className="img-fluid" alt="..." />
           </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">{product.name}</h5>
+          <div className="col-md-7">
+            <div className="card-body">
+              <h5 className="card-title">{product.name}</h5>
               <div>
                 {product.star > 0 &&
                   Array.from({ length: 5 }, (_, key) => {
@@ -38,10 +38,10 @@ function CardProductList(props) {
                       );
                   })}
               </div>
-              <div className="mb-2">
+              <div className="mb-3">
                 <span className="fw-bold h4">{formatter.format(price)}</span>
                 {product.originPrice > 0 && (
-                  <del className="small text-muted ms-2">
+                  <del className="small ms-2">
                     {formatter.format(product.originPrice)}
                   </del>
                 )}

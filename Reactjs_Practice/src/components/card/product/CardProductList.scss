@@ -1,11 +1,20 @@
 .card-container {
   width: 40vw;
   margin: 25px 5px;
-  // opacity: 0.5;
-  .card-body {
-    background-color: transparent;
-  }
-  button {
-    width: 45px;
+  .card {
+    .img-fluid {
+      border-radius: 20px;
+    }
+    .card-body {
+      .fw-bold {
+        color: red;
+      }
+      .rounded {
+        color: none !important;
+      }
+    }
+    button {
+      width: 10vw;
+    }
   }
 }

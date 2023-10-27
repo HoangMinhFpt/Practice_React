@@ -16,10 +16,9 @@
         center;
       color: white;
       .product-best {
-        .carousel-inner {
-          margin-left: 10vw;
-          width: 80vw;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
