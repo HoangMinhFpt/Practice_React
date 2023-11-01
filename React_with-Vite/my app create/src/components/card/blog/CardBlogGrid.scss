@@ -1,0 +1,30 @@
+.card-blog-grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 20rem;
+    border: none;
+    margin: 5px 20px;
+    align-items: center;
+
+    .card-body {
+      .date-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: flex;
+          color: red;
+          h5 {
+            bottom: 0;
+          }
+        }
+      }
+      button {
+        width: 10vw;
+      }
+    }
+  }
+}

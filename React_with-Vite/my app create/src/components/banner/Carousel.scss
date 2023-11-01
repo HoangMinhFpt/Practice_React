@@ -1,0 +1,12 @@
+.owl-carousel-container {
+  width: 80.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .owl-carousel-content {
+    .card-list-carousel {
+      background-color: transparent !important;
+      color: white !important;
+    }
+  }
+}

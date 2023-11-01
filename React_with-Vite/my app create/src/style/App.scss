@@ -1,0 +1,30 @@
+.app-container {
+  .navbar-content {
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .App {
+    margin: 0 auto;
+    .container-fluid {
+      width: 75vw;
+    }
+    .container-best {
+      background: url(https://aero-theme.myshopify.com/cdn/shop/files/bkg_module_list.jpg?v=1613507284)
+        center;
+      color: white;
+      .product-best {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    // .container-blog {
+    //   .content-blog {
+    //     display: grid;
+    //   }
+    // }
+  }
+}
