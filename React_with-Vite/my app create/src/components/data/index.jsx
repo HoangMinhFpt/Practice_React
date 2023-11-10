@@ -1,3 +1,10 @@
+import {
+  faEnvelope,
+  faLocationDot,
+  faMobileScreen,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export const data = {
   banner: [
     {
@@ -139,7 +146,6 @@ export const data = {
   ],
   blogBanner: [
     {
-      to: "/blog/detail",
       img: "https://aero-theme.myshopify.com/cdn/shop/articles/post1-270x334.jpg?v=1519516270",
       title: "First slide label",
       date: "08/28/2023",
@@ -147,7 +153,6 @@ export const data = {
       description: "Nulla vitae elit libero, a pharetra augue mollis interdum",
     },
     {
-      to: "/blog/detail",
       img: "https://aero-theme.myshopify.com/cdn/shop/articles/post2-270x334.jpg?v=1519516260",
       title: "Second slide label",
       author: "MinhNH",
@@ -155,7 +160,6 @@ export const data = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      to: "/blog/detail",
       img: "https://aero-theme.myshopify.com/cdn/shop/articles/post1-270x334.jpg?v=1519516270",
       title: "Third slide label",
       author: "MinhNH",
@@ -197,4 +201,37 @@ export const data = {
       commentCount: 4,
     },
   ],
+  textFooter: {
+    description:
+      "We are a team of designers and developers who creates high quality premium Shopify themes.",
+    contact: [
+      {
+        title: "address",
+        icon: <FontAwesomeIcon icon={faLocationDot} className="icon-contact" />,
+        text: "Long An",
+      },
+      {
+        title: "phone",
+        icon: (
+          <FontAwesomeIcon icon={faMobileScreen} className="icon-contact" />
+        ),
+        text: "0123456789",
+      },
+      {
+        title: "email",
+        icon: (
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            className="icon-contact"
+            size="xs"
+          />
+        ),
+        text: "abc@gmail.com",
+      },
+    ],
+    content: {
+      title: "Main menu",
+      menu: ["home", "product", "account", "wishlist"],
+    },
+  },
 };

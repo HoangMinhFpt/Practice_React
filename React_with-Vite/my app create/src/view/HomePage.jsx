@@ -4,7 +4,6 @@ import CardBlogGrid from "../components/card/blog/CardBlogGrid";
 import CardProductGrid from "../components/card/product/CardProductGrid";
 import Collection from "../components/collection/Collection";
 import { data } from "../components/data";
-import Footer from "../components/footer/Footer";
 import ModulTitle from "../components/modul/title/ModulTitle";
 
 function HomePage() {
@@ -51,7 +50,6 @@ function HomePage() {
           })}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

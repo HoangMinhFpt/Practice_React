@@ -9,6 +9,7 @@ import Profile from "../view/Profile";
 import Wishlist from "../view/Wishlist";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import Footer from "../components/footer/Footer";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }
