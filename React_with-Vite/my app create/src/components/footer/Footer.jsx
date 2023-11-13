@@ -1,13 +1,19 @@
+import {
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { data } from "../data";
 import "./Footer.scss";
 
 function Footer() {
   const footer = data.textFooter;
-  console.log(footer.content);
   return (
     <div className="footer-container">
       <div className="footer-top">
-        <div className="footer-top-container">
+        <div className="container">
           <div className="row">
             <div className="col col-md-4 col-sm-12 col-footer">
               <div className="footer-content">
@@ -18,10 +24,11 @@ function Footer() {
                     footer.contact.map((item, index) => {
                       return (
                         <li key={index}>
-                          {item.icon}
-                          <span>
-                            {item.title}: {item.text}
-                          </span>
+                          <div className="footer-contact-item">
+                            <p>{item.icon}</p>
+                            <p>{item.title}: &nbsp;</p>
+                            <p>{item.text}</p>
+                          </div>
                         </li>
                       );
                     })}
@@ -36,9 +43,37 @@ function Footer() {
               <div className="footer-content-menu">
                 {footer.content.menu &&
                   footer.content.menu.map((item, index) => {
-                    return <div key={index}>{item}</div>;
+                    return (
+                      <div key={index} className="footer-content-item">
+                        {item}
+                      </div>
+                    );
                   })}
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="container">
+          <div className="container-inner">
+            <div className="footer-copyright">copyright © 2023 by minhNH.</div>
+            <div className="link-follow">
+              <ul className="list-unstyle text-content">
+                <li>
+                  <FontAwesomeIcon icon={faFacebookF} className="icon-link" />
+                </li>
+
+                <li>
+                  <FontAwesomeIcon icon={faTwitter} className="icon-link" />
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faInstagram} className="icon-link" />
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faGithub} />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
