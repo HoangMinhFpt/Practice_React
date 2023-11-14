@@ -1,4 +1,10 @@
 import {
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faEnvelope,
   faLocationDot,
   faMobileScreen,
@@ -231,7 +237,35 @@ export const data = {
     ],
     content: {
       title: "Main menu",
-      menu: ["home", "product", "account", "wishlist"],
+      menu: [
+        {
+          title: "Home",
+          link: "/",
+        },
+        {
+          title: "product",
+          link: "/product",
+        },
+        {
+          title: "account",
+          link: "/profile",
+        },
+        { title: "wishlist", link: "/wishlist" },
+      ],
     },
+    linkFollow: [
+      {
+        icon: <FontAwesomeIcon icon={faFacebookF} />,
+      },
+      {
+        icon: <FontAwesomeIcon icon={faTwitter} />,
+      },
+      {
+        icon: <FontAwesomeIcon icon={faInstagram} />,
+      },
+      {
+        icon: <FontAwesomeIcon icon={faGithub} />,
+      },
+    ],
   },
 };

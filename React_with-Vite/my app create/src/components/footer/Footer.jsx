@@ -1,15 +1,17 @@
-import {
-  faFacebookF,
-  faGithub,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faFacebookF,
+//   faGithub,
+//   faInstagram,
+//   faTwitter,
+// } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import { data } from "../data";
 import "./Footer.scss";
 
 function Footer() {
   const footer = data.textFooter;
+  console.log(footer.content.menu);
   return (
     <div className="footer-container">
       <div className="footer-top">
@@ -45,7 +47,12 @@ function Footer() {
                   footer.content.menu.map((item, index) => {
                     return (
                       <div key={index} className="footer-content-item">
-                        {item}
+                        <Link
+                          to={{ pathname: `${item.link}` }}
+                          className="text-link"
+                        >
+                          {item.title}
+                        </Link>
                       </div>
                     );
                   })}
@@ -60,19 +67,14 @@ function Footer() {
             <div className="footer-copyright">copyright © 2023 by minhNH.</div>
             <div className="link-follow">
               <ul className="list-unstyle text-content">
-                <li>
-                  <FontAwesomeIcon icon={faFacebookF} className="icon-link" />
-                </li>
-
-                <li>
-                  <FontAwesomeIcon icon={faTwitter} className="icon-link" />
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faInstagram} className="icon-link" />
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faGithub} />
-                </li>
+                {footer.linkFollow &&
+                  footer.linkFollow.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <div className="icon-link">{item.icon}</div>
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
           </div>

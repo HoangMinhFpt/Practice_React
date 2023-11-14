@@ -71,6 +71,16 @@
 
       .footer-content-item {
         padding: 10px 5px;
+
+        .text-link {
+          color: #5a6069;
+          transition: transform 1s linear;
+
+          &:hover {
+            color: white;
+            transform: translateX(10%);
+          }
+        }
       }
     }
 
@@ -87,7 +97,7 @@
 
   .footer-bottom {
     .container-inner {
-      padding: 50px 0;
+      padding: 35px 0;
       display: inline-block;
       vertical-align: top;
       width: 100%;
@@ -112,20 +122,20 @@
 
         ul {
           list-style: none;
+          padding: 10px 0;
           margin: 0;
-          padding: 0;
         }
 
         li {
           float: left;
-          margin: 5px 10px;
+          margin: 0px 10px;
 
-          a {
+          .icon-link {
             position: relative;
             display: inline-block;
             vertical-align: top;
             color: #838896;
-            font-size: 0;
+            font-size: 20px;
             line-height: 30px;
             width: 30px;
             height: 30px;
