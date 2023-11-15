@@ -15,10 +15,26 @@
       .fw-bold {
         color: red;
       }
-    }
 
-    button {
-      width: 10vw;
+      .btn-group {
+        width: 15vw;
+        display: flex;
+        justify-content: space-between;
+        .btn-cart {
+          border: #0d6efd solid 3px;
+          color: white;
+          &:hover {
+            background-color: #0d6efd;
+          }
+        }
+        .btn-wishlist {
+          border: #ff0000 solid 3px;
+          color: white;
+          &:hover {
+            background-color: #ff0000;
+          }
+        }
+      }
     }
   }
 }

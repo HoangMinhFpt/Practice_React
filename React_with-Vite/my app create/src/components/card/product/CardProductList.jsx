@@ -57,18 +57,10 @@ function CardProductList(props) {
                 )}
               </div>
               <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-sm btn-primary"
-                  title="Add to cart"
-                >
+                <button type="button" className="btn btn-sm btn-cart">
                   <FontAwesomeIcon icon={faCartPlus} />
                 </button>
-                <button
-                  type="button"
-                  className="btn btn-sm btn-danger "
-                  title="Add to wishlist"
-                >
+                <button type="button" className="btn btn-sm btn-wishlist">
                   <FontAwesomeIcon icon={faHeart} />
                 </button>
               </div>
