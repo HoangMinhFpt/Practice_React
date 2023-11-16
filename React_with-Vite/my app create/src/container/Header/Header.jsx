@@ -34,7 +34,11 @@ function Header({ to }) {
             <div className="icon-search">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div>
-            <input type="text" className="search-form" />
+            <input
+              type="text"
+              className="search-form"
+              placeholder="What's you want?"
+            />
           </div>
         </div>
         <div className="header-two-content">

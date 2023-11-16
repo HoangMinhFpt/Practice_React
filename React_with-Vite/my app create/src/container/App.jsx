@@ -7,13 +7,11 @@ import Login from "./Authencation/Login";
 import Notification from "../view/Notification";
 import Profile from "../view/Profile";
 import Wishlist from "../view/Wishlist";
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import Footer from "../components/footer/Footer";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <div className="app-container">
       <Header />

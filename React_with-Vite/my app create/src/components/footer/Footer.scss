@@ -1,6 +1,5 @@
 .footer-container {
-  background: url(https://aero-theme.myshopify.com/cdn/shop/files/bkg_footer_c0f71867-38e3-492b-995f-7d0269b97db1.jpg?v=1625767911)
-    transparent;
+  background: url(https://aero-theme.myshopify.com/cdn/shop/files/bkg_footer_c0f71867-38e3-492b-995f-7d0269b97db1.jpg?v=1625767911) transparent;
   color: white;
 
   .container {
@@ -65,24 +64,28 @@
     .col-footer {
       margin-bottom: 30px;
       border-right: 1px solid rgba(90, 96, 105, 0.4);
+
     }
 
     .footer-content-menu {
       text-transform: capitalize;
 
-      .footer-content-item {
+
+      .text-link {
+        color: #5a6069;
+        display: grid;
         padding: 10px 5px;
+        transition-duration: 0.5s;
+        transform: translateX(0);
 
-        .text-link {
-          color: #5a6069;
-          transition: transform 1s linear;
+        &:hover {
+          color: red;
+          transition-duration: 0.5s;
+          transform: translateX(10px);
 
-          &:hover {
-            color: white;
-            transform: translateX(10px);
-          }
         }
       }
+
     }
 
     .footer-title-menu {

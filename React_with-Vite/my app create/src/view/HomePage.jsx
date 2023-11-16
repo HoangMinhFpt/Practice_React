@@ -4,7 +4,8 @@ import CardBlogGrid from "../components/card/blog/CardBlogGrid";
 import CardProductGrid from "../components/card/product/CardProductGrid";
 import Collection from "../components/collection/Collection";
 import { data } from "../components/data";
-import ModulTitle from "../components/modul/title/ModulTitle";
+import ModuleTitle from "../components/module/title/ModuleTitle";
+import ViewMore from "../components/viewmore/ViewMore";
 
 function HomePage() {
   return (
@@ -21,7 +22,8 @@ function HomePage() {
         aria-hidden="true"
       />
       <div className="container-fluid">
-        <ModulTitle title="our product" />
+        <ModuleTitle title="our product" />
+        <ViewMore />
         <div className="row">
           {data.products.map((product, idx) => {
             return (
@@ -33,13 +35,13 @@ function HomePage() {
         </div>
       </div>
       <div className="container-best">
-        <ModulTitle title="best seller" />
+        <ModuleTitle title="best seller" />
         <div className="product-best">
           <Carousel data={data.products} />
         </div>
       </div>
       <div className="container-fluid">
-        <ModulTitle title="our blog" />
+        <ModuleTitle title="our blog" />
         <div className="row">
           {data.blogBanner.map((blog, idx) => {
             return (

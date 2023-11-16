@@ -46,14 +46,13 @@ function Footer() {
                 {footer.content.menu &&
                   footer.content.menu.map((item, index) => {
                     return (
-                      <div key={index} className="footer-content-item">
-                        <Link
-                          to={{ pathname: `${item.link}` }}
-                          className="text-link"
-                        >
-                          {item.title}
-                        </Link>
-                      </div>
+                      <Link
+                        key={index}
+                        to={{ pathname: `${item.link}` }}
+                        className="text-link"
+                      >
+                        {item.title}
+                      </Link>
                     );
                   })}
               </div>
