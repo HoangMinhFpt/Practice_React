@@ -268,4 +268,38 @@ export const data = {
       },
     ],
   },
+  category: [
+    {
+      id: "1",
+      type: "tire",
+      to: "/",
+    },
+    {
+      id: "2",
+      type: "brake",
+      to: "/",
+    },
+    {
+      id: "3",
+      type: "exhaust pipe",
+      to: "/",
+    },
+    {
+      id: "4",
+      type: "light",
+      to: "/",
+    },
+    {
+      id: "5",
+      type: "shock absorbers",
+      to: "/",
+    },
+  ],
+  color: [
+    { id: "1", name: "red" },
+    { id: "2", name: "green" },
+    { id: "3", name: "black" },
+    { id: "4", name: "white" },
+    { id: "5", name: "blue" },
+  ],
 };

@@ -11,7 +11,6 @@ import "./Footer.scss";
 
 function Footer() {
   const footer = data.textFooter;
-  console.log(footer.content.menu);
   return (
     <div className="footer-container">
       <div className="footer-top">
