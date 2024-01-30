@@ -302,4 +302,18 @@ export const data = {
     { id: "4", name: "white" },
     { id: "5", name: "blue" },
   ],
+  price: [
+    { id: "1", from: "0", to: "500000" },
+    { id: "2", from: "1000000", to: "1500000" },
+    { id: "3", from: "1500000", to: "2500000" },
+    { id: "4", from: "2500000", to: "500000" },
+    { id: "5", from: "5000000", to: "50000000" },
+  ],
+  reviewStart: [
+    { id: "1", start: 1 },
+    { id: "2", start: 2 },
+    { id: "3", start: 3 },
+    { id: "4", start: 4 },
+    { id: "5", start: 5 },
+  ],
 };

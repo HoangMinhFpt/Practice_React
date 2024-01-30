@@ -1,7 +1,9 @@
 import { useState } from "react";
-import "./Color.scss";
+import "./Review.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function Color(props) {
+function Review(props) {
   const [statusType, setStatusType] = useState();
 
   const handleChangeStatus = (id) => {
@@ -12,7 +14,7 @@ function Color(props) {
   };
 
   return (
-    <div className="color-container">
+    <div className="review-start-container">
       <div className="card mb-3 accordion">
         <div
           className="card-header fw-bold accordion-icon-button"
@@ -21,7 +23,7 @@ function Color(props) {
           aria-expanded="true"
           aria-controls="filterColor"
         >
-          Color
+          review
         </div>
         <ul className="list-group list-group-flush show" id="filterColor">
           {props.data &&
@@ -35,9 +37,18 @@ function Color(props) {
                     onClick={() => {
                       handleChangeStatus(item.id);
                     }}
-                    style={{ backgroundColor: `${item.name}` }}
                   />
-                  {item.type} {item.name}
+                  {item.start > 0 &&
+                    Array.from({ length: 5 }, (_, key) => {
+                      if (key < item.start)
+                        return (
+                          <FontAwesomeIcon
+                            icon={faStar}
+                            key={key}
+                            className="text-warning"
+                          />
+                        );
+                    })}
                 </li>
               );
             })}
@@ -47,4 +58,4 @@ function Color(props) {
   );
 }
 
-export default Color;
+export default Review;

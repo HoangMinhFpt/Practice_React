@@ -1,0 +1,57 @@
+.module-toolbar-container {
+  display: flex;
+  border: solid grey 2px;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 15px;
+  button {
+    background-color: white;
+    font-size: 20px;
+    border: none;
+    opacity: 0.25;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+  .module-toolbar-content-left {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    .btn-group {
+      display: flex;
+      justify-content: space-evenly;
+      width: 55%;
+      .btn-grid {
+        padding: 5px;
+      }
+    }
+    .text-paging {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .form-select {
+    width: 50%;
+    border-radius: 10px;
+    text-transform: capitalize;
+  }
+  .module-toolbar-content-center {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  .module-toolbar-content-right {
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+  }
+}

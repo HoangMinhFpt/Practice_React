@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Color.scss";
+import "./Price.scss";
 
-function Color(props) {
+function Price(props) {
   const [statusType, setStatusType] = useState();
 
   const handleChangeStatus = (id) => {
@@ -12,7 +12,7 @@ function Color(props) {
   };
 
   return (
-    <div className="color-container">
+    <div className="price-container">
       <div className="card mb-3 accordion">
         <div
           className="card-header fw-bold accordion-icon-button"
@@ -21,7 +21,7 @@ function Color(props) {
           aria-expanded="true"
           aria-controls="filterColor"
         >
-          Color
+          price
         </div>
         <ul className="list-group list-group-flush show" id="filterColor">
           {props.data &&
@@ -37,7 +37,7 @@ function Color(props) {
                     }}
                     style={{ backgroundColor: `${item.name}` }}
                   />
-                  {item.type} {item.name}
+                  {item.from}-{item.to}
                 </li>
               );
             })}
@@ -47,4 +47,4 @@ function Color(props) {
   );
 }
 
-export default Color;
+export default Price;
